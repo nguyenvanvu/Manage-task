@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Admin | Project</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="images/icons/favicon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/icons/favicon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/icons/favicon-114x114.png">
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700">
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,700,300">
+    <link type="text/css" rel="stylesheet" href="global/vendors/font-awesome/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="global/vendors/simple-line-icons/simple-line-icons.css">
+    <link type="text/css" rel="stylesheet" href="global/vendors/bootstrap/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="global/vendors/animate.css/animate.css">
+    <link type="text/css" rel="stylesheet" href="assets/vendors/treegrid/css/jquery.treegrid.css">
+    <link type="text/css" rel="stylesheet" href="global/css/core.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/system.css">
+</head>
+<body><!--BEGIN TOPBAR-->
+<div class="page-header-topbar">
+    <nav id="topbar" role="navigation" class="navbar navbar-default">
+        <div class="container-fluid">
+            <div id="topbar-menu" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a id="logo" href="#">PMS Dashboard</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown"><a data-hover="dropdown" href="#" class="dropdown-toggle"><i class="icon-bell"></i><span class="badge badge-danger">3</span></a>
+                        <ul class="dropdown-menu dropdown-alerts dropdown-topbar">
+                            <li><p>You have 14 new notifications</p></li>
+                            <li>
+                                <div class="dropdown-slimscroll">
+                                    <ul>
+                                        <li><a href="#" target="_blank">Lorem ipsum dolor sit amet<br/><span class="text-muted small">4 mins ago</span></a></li>
+                                        <li><a href="#" target="_blank">Consectetur adipiscing elit, sed do eiusmod<br/><span class="text-muted small">12 mins ago</span></a></li>
+                                        <li><a href="#" target="_blank">Tempor incididunt ut labore et dolore magna<br/><span class="text-muted small">15 mins ago</span></a></li>
+                                        <li><a href="#" target="_blank">Ut enim ad minim<br/><span class="text-muted small">18 mins ago</span></a></li>
+                                        <li><a href="#" target="_blank">Sed ut perspiciatis unde omnis<br/><span class="text-muted small">19 mins ago</span></a></li>
+                                        <li><a href="#" target="_blank">Sed quia non numquam<br/><span class="text-muted small">2 days ago</span></a></li>
+                                        <li><a href="#" target="_blank">Lorem ipsum dolor sit amet<br/><span class="text-muted small">5 days ago</span></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="last"><a href="extra-user-list.html" class="text-right">See all alerts</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a data-hover="dropdown" href="#" class="dropdown-toggle"><i class="icon-calendar"></i><span class="badge badge-warning">7</span></a>
+                        <ul class="dropdown-menu dropdown-alerts dropdown-topbar">
+                            <li><p>You have 14 new notifications</p></li>
+                            <li>
+                                <div class="dropdown-slimscroll">
+                                    <ul>
+                                        <li><a href="#" target="_blank">Lorem ipsum dolor sit amet<br/><span class="text-muted small">4 mins ago</span></a></li>
+                                        <li><a href="#" target="_blank">Consectetur adipiscing elit, sed do eiusmod<br/><span class="text-muted small">12 mins ago</span></a></li>
+                                        <li><a href="#" target="_blank">Tempor incididunt ut labore et dolore magna<br/><span class="text-muted small">15 mins ago</span></a></li>
+                                        <li><a href="#" target="_blank">Ut enim ad minim<br/><span class="text-muted small">18 mins ago</span></a></li>
+                                        <li><a href="#" target="_blank">Sed ut perspiciatis unde omnis<br/><span class="text-muted small">19 mins ago</span></a></li>
+                                        <li><a href="#" target="_blank">Sed quia non numquam<br/><span class="text-muted small">2 days ago</span></a></li>
+                                        <li><a href="#" target="_blank">Lorem ipsum dolor sit amet<br/><span class="text-muted small">5 days ago</span></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="last"><a href="extra-user-list.html" class="text-right">See all alerts</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown dropdown-user"><a href="#" data-hover="dropdown" class="dropdown-toggle"><i class="fa fa-user"></i>&nbsp;<span class="caret"></span></a>
+                        <ul role="menu" class="dropdown-menu">
+                            <li class="disabled"><a href="#"><strong> Signed in as</strong><br/>admin@example.com</a></li>
+                            <li><a href="#"><i class="icon-logout"></i><span class="mlm">Logout</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<!--END TOPBAR-->
+<div id="wrapper"><!--BEGIN PAGE WRAPPER-->
+    <div id="page-wrapper"><!--BEGIN SIDEBAR MAIN-->
+        <div class="sidebar-main sidebar">
+            <div class="sidebar-collapse sidebar-scroll">
+                <ul id="sidebar-main" class="nav">
+                    <li><a href="index.html"><i class="icon-home"></i><span class="menu-title">Dashboard</span></a></li>
+                    <li class="active"><a href="project.html"><i class="icon-notebook"></i><span class="menu-title">Task by Projects</span><span class="badge badge-success">6</span></a></li>
+                    <li><a href="member.html"><i class="icon-users"></i><span class="menu-title">Task by Members</span><span class="badge badge-warning">4</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <!--END SIDEBAR MAIN--><!--BEGIN CONTENT-->
+        <div class="page-content">
+            <div class="box-content">
+                <div class="content">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel">
+                                <div class="panel-heading"><h4 class="pull-left">Projects</h4>
+
+                                    <div class="pull-right mts">
+                                        <div style="min-width: 300px" class="row">
+                                            <div class="col-md-6 text-right prn">
+                                                <div data-toggle="buttons" class="btn-group btn-group-sm"><label class="btn btn-info active"><input type="radio" name="button_group" value="Open"/>Open</label><label class="btn btn-info"><input type="radio" name="button_group" value="Close"/>Close</label></div>
+                                            </div>
+                                            <div class="col-md-6"><select class="form-control input-sm">
+                                                <option value="0">This week</option>
+                                                <option value="1">Last week</option>
+                                            </select></div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="panel-body mtm">
+                                    <table class="tree-projects table table-striped table-condensed mbn">
+                                        <thead>
+                                        <tr>
+                                            <th>Porjects</th>
+                                            <th width="13%">Member</th>
+                                            <th width="10%">Points</th>
+                                            <th width="13%">Status</th>
+                                            <th width="13%">Deadline</th>
+                                            <th width="10%">Priority</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr class="treegrid-1">
+                                            <td>Project 1</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="treegrid-2 treegrid-parent-1">
+                                            <td>Feature 1</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="treegrid-3 treegrid-parent-2">
+                                            <td><a href="#" class="text-primary">Update nội dung tiếng Nhật</a></td>
+                                            <td>Duc TLA</td>
+                                            <td>10 Point</td>
+                                            <td>
+                                                <div class="label label-default">Closed</div>
+                                            </td>
+                                            <td>03.10.2014</td>
+                                            <td>
+                                                <div class="label label-success">Normal</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="treegrid-4 treegrid-parent-2">
+                                            <td><a href="#" class="text-primary">Đổi slogan trên slide</a></td>
+                                            <td>Hoang HD</td>
+                                            <td>14 Point</td>
+                                            <td>
+                                                <div class="label label-default">Closed</div>
+                                            </td>
+                                            <td>03.10.2014</td>
+                                            <td>
+                                                <div class="label label-success">Normal</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="treegrid-6 treegrid-parent-1">
+                                            <td>Feature 2</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="treegrid-7 treegrid-parent-6">
+                                            <td><a href="#" class="text-primary">Update member info</a></td>
+                                            <td>Phuc ND</td>
+                                            <td>15 Point</td>
+                                            <td>New</td>
+                                            <td>03.10.2014</td>
+                                            <td>
+                                                <div class="label label-danger">Urgent</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="treegrid-8 treegrid-parent-6">
+                                            <td><a href="#" class="text-primary">Chỉnh lại nội dung web (VN & CN)</a></td>
+                                            <td>Luan TC</td>
+                                            <td>30 Point</td>
+                                            <td>
+                                                <div class="label label-default">Closed</div>
+                                            </td>
+                                            <td>03.10.2014</td>
+                                            <td>
+                                                <div class="label label-success">Normal</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="treegrid-9">
+                                            <td>Project 2</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="treegrid-10 treegrid-parent-9">
+                                            <td>Feature 1</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="treegrid-11 treegrid-parent-10">
+                                            <td><a href="#" class="text-primary">Tasks 1</a></td>
+                                            <td>Tien NTM</td>
+                                            <td>50 Point</td>
+                                            <td>New</td>
+                                            <td>03.10.2014</td>
+                                            <td>
+                                                <div class="label label-success">Normal</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="treegrid-12 treegrid-parent-10">
+                                            <td><a href="#" class="text-primary">Tasks 2</a></td>
+                                            <td>Thach LH</td>
+                                            <td>35 Point</td>
+                                            <td>
+                                                <div class="label label-default">Closed</div>
+                                            </td>
+                                            <td>03.10.2014</td>
+                                            <td>
+                                                <div class="label label-success">Normal</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="treegrid-13 treegrid-parent-9">
+                                            <td>Feature 2</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="treegrid-14 treegrid-parent-13">
+                                            <td><a href="#" class="text-primary">Tasks 1</a></td>
+                                            <td>Thinh TN</td>
+                                            <td>40 Point</td>
+                                            <td>New</td>
+                                            <td>03.10.2014</td>
+                                            <td>
+                                                <div class="label label-success">Normal</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="treegrid-15 treegrid-parent-13">
+                                            <td><a href="#" class="text-primary">Tasks 2</a></td>
+                                            <td>Dung DN</td>
+                                            <td>47 Point</td>
+                                            <td>New</td>
+                                            <td>03.10.2014</td>
+                                            <td>
+                                                <div class="label label-success">Normal</div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--BEGIN SIDEBAR SECOND-->
+                <div class="sidebar-second sidebar">
+                    <div class="sidebar-section">Todo list</div>
+                    <div class="list-todo-scroll">
+                        <ul class="list-group list-todo">
+                            <li class="list-group-item level1"><a href="">Adjust water pressure of the sink
+                                <div class="clear mtx">
+                                    <div class="tk-point">10 points</div>
+                                    <div class="tk-deadline">20.09.2014</div>
+                                </div>
+                            </a></li>
+                            <li class="list-group-item level2"><a href="">Remove old refrigerator and stove
+                                <div class="clear mtx">
+                                    <div class="tk-point">10 points</div>
+                                    <div class="tk-deadline">20.09.2014</div>
+                                </div>
+                            </a></li>
+                            <li class="list-group-item level3"><a href="">Install new sink
+                                <div class="clear mtx">
+                                    <div class="tk-point">10 points</div>
+                                    <div class="tk-deadline">20.09.2014</div>
+                                </div>
+                            </a></li>
+                            <li class="list-group-item level4"><a href="">Install new flooring
+                                <div class="clear mtx">
+                                    <div class="tk-point">10 points</div>
+                                    <div class="tk-deadline">20.09.2014</div>
+                                </div>
+                            </a></li>
+                            <li class="list-group-item level1"><a href="">Adjust water pressure of the sink
+                                <div class="clear mtx">
+                                    <div class="tk-point">10 points</div>
+                                    <div class="tk-deadline">20.09.2014</div>
+                                </div>
+                            </a></li>
+                            <li class="list-group-item level2"><a href="">Remove old refrigerator and stove
+                                <div class="clear mtx">
+                                    <div class="tk-point">10 points</div>
+                                    <div class="tk-deadline">20.09.2014</div>
+                                </div>
+                            </a></li>
+                            <li class="list-group-item level3"><a href="">Duis aute irure dolor in reprehenderit in voluptate velit
+                                <div class="clear mtx">
+                                    <div class="tk-point">10 points</div>
+                                    <div class="tk-deadline">20.09.2014</div>
+                                </div>
+                            </a></li>
+                            <li class="list-group-item level4"><a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                <div class="clear mtx">
+                                    <div class="tk-point">10 points</div>
+                                    <div class="tk-deadline">20.09.2014</div>
+                                </div>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div class="mtl"></div>
+                    <div class="sidebar-section">Activity</div>
+                    <div class="timeline mbm">
+                        <div class="tl-item">
+                            <div class="mll">
+                                <div class="text-muted">5 minutes ago</div>
+                                <p><a href="" class="text-info">Jessi</a>commented your post.</p></div>
+                        </div>
+                        <div class="tl-item">
+                            <div class="mll">
+                                <div class="text-muted">11:30</div>
+                                <p>Join comference</p></div>
+                        </div>
+                        <div class="tl-item border-success">
+                            <div class="mll">
+                                <div class="text-muted">10:30</div>
+                                <p>Call to customer<a href="" class="text-info">Jacob</a>and discuss the detail.</p></div>
+                        </div>
+                        <div class="tl-item border-primary">
+                            <div class="mll">
+                                <div class="text-muted">Wed, 25 Mar</div>
+                                <p>Finished task<a href="" class="text-info">Testing</a>.</p></div>
+                        </div>
+                        <div class="tl-item border-warning">
+                            <div class="mll">
+                                <div class="text-muted">Thu, 10 Mar</div>
+                                <p>Trip to the moon</p></div>
+                        </div>
+                        <div class="tl-item border-info">
+                            <div class="mll">
+                                <div class="text-muted">Sat, 5 Mar</div>
+                                <p>Prepare for presentation</p></div>
+                        </div>
+                        <div class="tl-item">
+                            <div class="mll">
+                                <div class="text-muted">Sun, 11 Feb</div>
+                                <p><a href="" class="text-info">Jessi</a>assign you a task<a href="" class="text-info">Mockup Design</a>.</p></div>
+                        </div>
+                        <div class="tl-item">
+                            <div class="mll">
+                                <div class="text-muted">Thu, 17 Jan</div>
+                                <p>Follow up to close deal</p></div>
+                        </div>
+                    </div>
+                </div>
+                <!--END SIDEBAR SECOND--></div>
+        </div>
+        <!--END CONTENT--></div>
+    <!--END PAGE WRAPPER--></div>
+<!--BEGIN FOOTER-->
+<div id="footer">
+    <div class="copyright">2014 © &mu;Admin - Responsive Multi-Style Admin Template</div>
+</div>
+<!--END FOOTER-->
+<script src="global/js/jquery-1.10.2.min.js"></script>
+<script src="global/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="global/js/jquery-ui.js"></script>
+<script src="global/vendors/bootstrap/js/bootstrap.min.js"></script>
+<script src="global/vendors/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
+<script src="global/js/html5shiv.js"></script>
+<script src="global/js/respond.min.js"></script>
+<script src="global/vendors/metisMenu/jquery.metisMenu.js"></script>
+<script src="global/vendors/slimScroll/jquery.slimscroll.js"></script>
+<!--LOADING SCRIPTS FOR PAGE-->
+<script src="assets/vendors/treegrid/js/jquery.treegrid.js"></script>
+<script src="assets/vendors/treegrid/js/jquery.treegrid.bootstrap3.js"></script>
+<script src="assets/js/project.js"></script>
+<!--CORE JAVASCRIPT-->
+<script src="global/js/core.js"></script>
+<script src="assets/js/system-layout.js"></script>
+<script>jQuery(document).ready(function () {
+    "use strict";
+    Layout.init();
+    Project.init();
+});
+
+
+</script>
+</body>
+</html>

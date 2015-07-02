@@ -1,0 +1,148 @@
+@layout("Dashboard"){
+   <div class="content">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="panel">
+              <div class="panel-heading">
+                <h4>Năng lực<br/>(So với tháng làm việc tốt nhất)</h4>
+              </div>
+              <div class="panel-body text-center">
+                <div id="gauge-chart" style="width:100%; height:205px;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="panel">
+              <div class="panel-heading">
+                <h4>Mục tiêu tháng</h4><br/>
+              </div>
+              <div class="panel-body">
+                <div class="point-statistics">
+                  <div class="row">
+                    <div class="col-md-6 text-center">
+                      <div class="chart-status">
+                        <div class="chart-s1 "><span>S1: 35</span></div>
+                        <div class="chart-s2"><span class="right">S2: 45</span></div>
+                        <div class="chart-s3"><span>S3: 60</span></div>
+                        <div class="my-point"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                      <div class="remaining-points">
+                        <h3 class="text-danger" id = "pointConLai">0</h3>
+                        <p class="text-danger">Điểm Còn Lại</p>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6 prn">
+                          <div class="achieved-points">
+                            <h4><span id = "points">0</span> điểm</h4>
+                          </div>
+                        </div>
+                        <div class="col-md-6 pln">
+                          <div class="achieved-status">
+                            <h4><span id = "level-s">S1</span></h4>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="panel">
+              <div class="panel-heading">
+                <h4>Biểu đồ điểm những ngày gần đây</h4>
+              </div>
+              <div class="panel-body">
+                <div id="chart-point-list" style="width: 100%; height: 300px;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="panel">
+              <div class="panel-heading">
+                <h4>Thông kê điểm nhân viên trong tháng</h4>
+              </div>
+              <div class="panel-body">
+                <div class="point-member-list">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <table class="table table-striped" id ="table-striped-left" >
+                        <thead>
+                          <tr>
+                            <th>Vị trí</th>
+                            <th>Họ tên</th>
+                            <th>Số điểm</th>
+                          </tr>
+                        </thead>
+                        <tbody></tbody>
+                      </table>
+                    </div>
+                    <div class="col-md-6">
+                      <table class="table table-striped" id = "table-striped-right">
+                        <thead>
+                          <tr>
+                            <th>Vị trí</th>
+                            <th>Họ tên</th>
+                            <th>Số điểm</th>
+                          </tr>
+                        </thead>
+                        <tbody></tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="panel">
+              <div class="panel-heading">
+                <h4>Dự án</h4>
+              </div>
+              <div class="panel-body">
+                <div class="running-project-list">
+                  <table class="table dashboard_running_project_list">
+                    <thead></thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--BEGIN SIDEBAR SECOND-->
+      <div class="sidebar-second sidebar">
+        <div class="sidebar-section">Công việc cần làm</div>
+        <div class="list-todo-scroll">
+            <ul class="list-group list-todo"></ul>
+        </div>
+        <div class="mtl"></div>                
+      </div>
+      <!--END SIDEBAR SECOND-->      
+    <!--LOADING SCRIPTS FOR PAGE-->
+	<script src="@routes.Assets.at("assets/vendors/justgage/justgage.1.0.1.min.js")"></script>
+	<script src="@routes.Assets.at("assets/vendors/justgage/raphael.2.1.0.min.js")"></script>
+	<script src="@routes.Assets.at("assets/vendors/flot-chart/jquery.flot.js")"></script>
+	<script src="@routes.Assets.at("assets/vendors/flot-chart/jquery.flot.categories.js")"></script>
+	<script src="@routes.Assets.at("assets/vendors/flot-chart/jquery.flot.pie.js")"></script>
+	<script src="@routes.Assets.at("assets/vendors/flot-chart/jquery.flot.tooltip.js")"></script>
+	<script src="@routes.Assets.at("assets/vendors/flot-chart/jquery.flot.resize.js")"></script>
+	<script src="@routes.Assets.at("assets/vendors/flot-chart/jquery.flot.fillbetween.js")"></script>
+	<script src="@routes.Assets.at("assets/vendors/flot-chart/jquery.flot.stack.js")"></script>
+	<script src="@routes.Assets.at("assets/vendors/flot-chart/jquery.flot.spline.js")"></script>
+	<script src="@routes.Assets.at("assets/vendors/slimScroll/jquery.slimscroll.min.js")"></script>
+	<!--CORE JAVASCRIPT-->	
+	<script src="@routes.Assets.at("global/js/core.js")"></script>
+	<script src="@routes.Assets.at("global/js/dashboard.js")?v=1.1"></script>
+    <script src="@routes.Assets.at("global/js/project.js")?v=1.0"></script>
+    <script language="javascript">
+		jQuery(document).ready(function(){
+		   "use strict";
+		   $.fn.Dashboard.load('@routes.Dashboard.service()');
+		});
+    </script>
+}

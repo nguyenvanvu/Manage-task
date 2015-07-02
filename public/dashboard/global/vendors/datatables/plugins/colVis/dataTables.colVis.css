@@ -1,0 +1,94 @@
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * ColVis styles
+ */
+div.ColVis {
+	float: right;
+	margin-bottom: 1em;
+    position: relative;
+}
+
+button.ColVis_Button,
+ul.ColVis_collection li {
+	position: relative;
+	float: left;
+	cursor: pointer;
+	*cursor: hand;
+	white-space: nowrap;
+	background: #ffffff;
+}
+
+.ColVis_Button:hover,
+ul.ColVis_collection li:hover {
+	text-decoration: none !important;
+	background: #f3f3f3;
+}
+
+div.ColVis_collectionBackground {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1100;
+}
+
+ul.ColVis_collection {
+	list-style: none;
+	width: 150px;
+	padding: 0;
+	margin: 0;
+	border: 1px solid #ccc;
+	background-color: #f3f3f3;
+	overflow: hidden;
+	z-index: 2002;
+    float: right;
+}
+
+ul.ColVis_collection li {
+	position: relative;
+	height: auto;
+	left: 0;
+	right: 0;
+	display: block;
+	float: none;
+    padding: 6px 10px;
+    border-bottom: 1px solid #f2f2f2;
+}
+ul.ColVis_collection li label{
+    margin-bottom: 0;
+}
+
+
+ul.ColVis_collection li span {
+	display: inline-block;
+	padding-left: 0.5em;
+	cursor: pointer;
+}
+
+
+ul.ColVis_collection li.ColVis_Special {
+	border-color: #555;
+	background: rgb(237,237,237);
+}
+
+ul.ColVis_collection li.ColVis_Special:hover {
+	background: #e2e2e2;
+}
+
+
+span.ColVis_radio {
+	display: inline-block;
+	width: 20px;
+}
+
+div.ColVis_catcher {
+	position: absolute;
+	z-index: 1101;
+}
+
+.disabled {
+	color: #999;
+}
+
+

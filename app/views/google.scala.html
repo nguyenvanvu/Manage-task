@@ -1,0 +1,14 @@
+@main("Google"){
+	@helper.form(routes.Google.authenticate) {
+		<input type="hidden" name="access_token" value="">
+	}
+	<script language="javascript">
+	if(m = window.location.href.match(/access_token\=([^\&]+)/)){
+		jQuery("form input").val(m[1]);
+		jQuery("form").submit();
+	}
+	else{
+		window.location.href='@routes.Application.login()';
+	}
+	</script>
+}

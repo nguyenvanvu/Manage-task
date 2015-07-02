@@ -1,0 +1,76 @@
+@layout("Project"){
+	<div class="content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel">
+                    <div class="panel-heading">
+                    	<h4>Dự án</h4>
+                    	<div class="pull-right mts">
+                                        <div class="row" style="min-width: 300px">
+                                            <div class="col-md-6 text-right prn">
+                                                <div class="btn-group btn-group-sm" data-toggle="buttons">
+                                                	<label id = "lblOpen" class="btn btn-info active">
+                                                		<input  type="radio" value="Open" name="button_group">
+                                                		Open
+                                                	</label>
+                                                	<label id = "lblClosed" class="btn btn-info">
+                                                		<input  type="radio" value="Close" name="button_group">
+                                                		Close
+                                                	</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+	                                            <select class="form-control input-sm">
+	                                                <option value="1">Tuần hiện tại</option>
+	                                                <option value="2">Tuần trước</option>
+	                                                <option value="3">Tháng hiện tại</option>
+	                                                <option value="4">Tháng trước</option>
+	                                            </select>
+                                            </div>
+                                        </div>
+                         </div>
+                    </div>
+                    <div class="panel-body">
+                        <table class="tree-projects table table-striped table-condensed mbn">
+                            <thead>
+                            <tr>
+                                <th>Dự án</th>
+                                <th width="13%">Thành viên</th>
+                                <th width="10%">Điểm</th>
+                                <th width="13%">Trạng thái</th>
+                                <th width="13%">Hạn chót</th>
+                                <th width="10%">Độ ưu tiên</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                         
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-second sidebar">
+    	<div class="sidebar-section">Công việc cần làm</div>
+        <div class="list-todo-scroll">
+            <ul class="list-group list-todo"></ul>
+        </div>
+    	<div class="mtl"></div>                
+    </div>
+    <script src="@routes.Assets.at("assets/vendors/treegrid/js/jquery.treegrid.js")"></script>
+	<script src="@routes.Assets.at("assets/vendors/treegrid/js/jquery.treegrid.bootstrap3.js")"></script>
+    <!--CORE JAVASCRIPT-->
+    <script src="@routes.Assets.at("global/js/core.js")"></script>
+    <script src="@routes.Assets.at("global/js/issues.js")"></script>
+	<script src="@routes.Assets.at("global/js/dashboard.js")?v=1.1"></script>
+	<script src="@routes.Assets.at("global/js/jquery.blockUI.js")?v=1.1"></script>
+     
+    <script language="javascript">
+	jQuery(document).ready(function () {
+        "use strict";
+        $.fn.Issues.load('@routes.Dashboard.service()');
+		$.fn.Dashboard.project('@routes.Dashboard.service()');     
+    });
+    </script>
+}

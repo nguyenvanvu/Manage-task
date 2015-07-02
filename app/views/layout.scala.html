@@ -1,0 +1,45 @@
+@(title: String)(content: Html)
+@main(title){
+	<div class="page-header-topbar">
+	  <nav id="topbar" role="navigation" class="navbar navbar-default">
+	    <div class="container-fluid">
+	      <div id="topbar-menu" class="collapse navbar-collapse">
+          	<ul class="nav navbar-nav navbar-left">
+                <li><a id="logo" href="@routes.Dashboard.index()">PMS Dashboard</a></li>
+            </ul>
+	        <ul class="nav navbar-nav navbar-right horizontal-menu">
+              <li class="dropdown"><a data-hover="dropdown" href="javascript:void(0);" class="dropdown-toggle"><i class="icon-bell"></i></a></li>
+              <li class="dropdown"><a data-hover="dropdown" href="javascript:void(0);" class="dropdown-toggle"><i class="icon-calendar"></i></a></li>	
+	          <li class="dropdown dropdown-user"><a href="javascript:void(0);" data-hover="dropdown" class="dropdown-toggle"><i class="fa fa-user"></i>&nbsp;<span class="caret"></span></a>
+	            <ul role="menu" class="dropdown-menu">
+	              <li class="disabled"><a href="javascript:void(0);"><strong> Tài khoản</strong><br/>@session.get("email")</a></li>
+	              <li><a href="@routes.Application.logout()"><i class="icon-logout"></i><span class="mlm">Thoát</span></a></li>
+	            </ul>
+	          </li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	</div>
+	<div id="wrapper">
+	  <div id="page-wrapper">    
+	    <div class="sidebar-main sidebar">
+	        <div class="sidebar-collapse sidebar-scroll">	        	
+                <ul id="sidebar-main" class="nav">
+                    <li @if(request.path().equals("/dashboard")){class="active"}><a href="@routes.Dashboard.index()"><i class="icon-home"></i><span class="menu-title">Dashboard</span></a></li>
+                    <li @if(request.path().equals("/project")){class="active"}><a href="@routes.Dashboard.project()"><i class="icon-notebook"></i><span class="menu-title">Công việc theo dự án</span></a></li>
+                    <li @if(request.path().equals("/member")){class="active"}><a href="@routes.Dashboard.member()"><i class="icon-users"></i><span class="menu-title">Công việc theo nhân viên</span></a></li>
+                </ul>
+            </div>
+        </div>
+	    <div class="page-content">
+        	<div class="box-content">        		
+		    	@content 
+            </div>
+	    </div>
+	  </div>
+	  <div id="footer">
+	    <div class="copyright">2014 © &mu;Admin - Responsive Multi-Style Admin Template</div>
+	  </div>
+	</div>   
+}

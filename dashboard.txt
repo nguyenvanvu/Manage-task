@@ -1,0 +1,4 @@
+Lib
+	https://code.google.com/p/google-api-java-client/wiki/OAuth2
+	http://www.javacodegeeks.com/2014/04/how-to-implement-a-session-timeout-in-play-framework-2.html
+	http://www.avaje.org/static/javadoc/pub/com/avaje/ebean/SqlQuery.html

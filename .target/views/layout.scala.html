@@ -1,0 +1,30 @@
+@(title: String)(content: Html)
+@main(title){
+	<div class="page-header-topbar">
+	  <nav id="topbar" role="navigation" class="navbar navbar-default">
+	    <div class="container-fluid">
+	      <div id="topbar-menu" class="collapse navbar-collapse">
+	        <ul class="nav navbar-nav navbar-right horizontal-menu">
+	          <li class="dropdown dropdown-user"><a href="javascript:void(0);" data-hover="dropdown" class="dropdown-toggle"><i class="fa fa-user"></i>&nbsp;<span class="caret"></span></a>
+	            <ul role="menu" class="dropdown-menu">
+	              <li class="disabled"><a href="javascript:void(0);"><strong> Signed in as</strong><br/>@session.get("email")</a></li>
+	              <li><a href="@routes.Application.logout()"><i class="icon-logout"></i><span class="mlm">Sign out</span></a></li>
+	            </ul>
+	          </li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	</div>
+	<div id="wrapper">
+	  <div id="page-wrapper" class="clearfix">    
+	    <div class="sidebar-main sidebar"></div>
+	    <div class="page-content clearfix"> 
+	    	@content 
+	    </div>
+	  </div>
+	  <div id="footer">
+	    <div class="copyright">2014 © &mu;Admin - Responsive Multi-Style Admin Template</div>
+	  </div>
+	</div>   
+}
